@@ -1,0 +1,13 @@
+POST http://localhost:5000/api/sign_up
+Content-Type: application/json
+
+{
+  "name": "James Smith",
+  "email": "james@jsmith.com",
+  "password": "strongPassword23!"
+}
+
+###
+POST http://localhost:5000/api/sign_in
+###
+POST http://localhost:5000/api/clean
