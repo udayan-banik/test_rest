@@ -44,8 +44,8 @@ async function getUser(req,res, next) {
     let user
     try {
         user = await User.find({email: req.params.email, password: req.params.password})
-        if(user == null) //check if subscriber exists or here doesnot exist
-            return res.status(404).json({message: 'Cannot find user'}) //return used 'cause we immediately wanna escape out if there is no subscriber
+        if(user == null) //check if user exists or here doesnot exist
+            return res.status(404).json({message: 'Cannot find user'}) //return used 'cause we immediately wanna escape out if there is no user
     } catch (err) {
         return res.status(500).json({ message: err.message })
     }
